@@ -31,23 +31,12 @@ def sum_text_hole (text):
     return res
 
 
-def polyndrom (text, len_of_poly = 5) :
+def is_palindrome (text) :
     '''
-    search polyndroms in text
+    Check if a text is palindrome or not
     :param text:
-    :return: list of polyndroms or Null
+    :return: True or False
     '''
-    x = list(text)
-    res = 'no polyndrom'
-
-    if len(x) < len_of_poly-1:
-        res = 'text too short'
-    else:
-        word = ''.join(x[0:(len_of_poly-1)])
-        flag = False
-        i = len_of_poly-2
-        while flag == False:
-            i += 1
-            word += x[i]
-            #drow = reversed(word)
-            print (word, drow)
+    if (text == text[::-1]):
+        return True
+    return False
