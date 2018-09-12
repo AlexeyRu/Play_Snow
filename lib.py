@@ -41,6 +41,7 @@ def is_palindrome (text) :
         return True
     return False
 
+
 def find_winner(game_state):
     '''
     Determination of the winner in the game of tic-tac-toe
@@ -50,7 +51,7 @@ def find_winner(game_state):
     res2 = [0, 0, 0]
     res3 = 'D'
     res4, res5 = 0, 0
-    for r, i in enumerate(s):
+    for r, i in enumerate(game_state):
         res1 = 0
         for c, j in enumerate(i):
             if j == 'X':
@@ -61,8 +62,8 @@ def find_winner(game_state):
             if r == 1 and c == 1 and j == 'X': res4 += 1; res5 += 1
             if r == 2 and c == 0 and j == 'X': res5 += 1
             if r == 2 and c == 2 and j == 'X': res4 += 1
-            print(res1, end=" ")
-        print(res3, res2, res4, res5, end="  ")
+            #print(res1, end=" ")
+        #print(res3, res2, res4, res5, end="  ")
         if res1 == 0:
             res3 = 'O'
         elif res1 == 3:
