@@ -1,11 +1,15 @@
 import lib
 
 def main():
-    x=[]
-    y = input('Введите исход иигры в "крестики нолики" по строкам. В конце каждой строки жмем "Enter":\n')
-    x.append(y)
-    x.append(input())
-    x.append(input())
+    print('Введите исход игры в "крестики нолики" по строкам. В конце каждой строки жмем "Enter:\n')
+    x = []
+    while len(x) < 3:
+        y = lib.check_input_TicTacToe_state(input())
+        if y[0] == False:
+            print(y[1])
+        else:
+            x.append(y)
+
 
     print('Было введено:\n', x)
 

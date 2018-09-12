@@ -77,7 +77,32 @@ def find_winner(game_state):
         else:
             if res4 == 0 or res5 == 0: res = 'O'
             if res4 == 3 or res5 == 3: res = 'X'
+            res = 'D'
     return(res)
+
+
+def check_input_TicTacToe_state(input):
+    '''
+    Check input validation
+    :param input:
+    :return:validation - True/False, reason: string
+    '''
+    validation = False
+    if len(input) < 3 :
+        reason = 'input is too short (need 3 symbols). Try one more time!'
+    elif len(input) > 3 :
+        reason = 'input is too long (need 3 symbols). Try one more time!'
+    else:
+        v = 1
+        for j in [i in {'X', 'O','x','o'} for i in input]:
+            v = v * j
+        if  v == 1:
+            validation = True
+            reason = input.upper()
+        else:
+            reason = 'You use no correct symbols (only "X" and "O"). Try one more time!'
+    return validation, reason
+
 
 
     [
