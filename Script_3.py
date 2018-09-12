@@ -1,7 +1,7 @@
 import lib
 
 def main():
-    text = input('Введите текст (только буквы латинского алфавита и цифры)\n')
+    text = input('Введите текст \n')
 
     if lib.is_palindrome(text):
         print('Этот текст является палиндромом')
