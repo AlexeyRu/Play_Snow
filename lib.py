@@ -12,7 +12,7 @@ def most_frequent_characters(text):
     for i in d:
         if d[i] == max(d.values()):
             res.append(i)
-    return res[0]
+    return res
 
 
 def sum_text_hole(text):
@@ -22,7 +22,7 @@ def sum_text_hole(text):
     :return: number of text holes
     """
     res = 0
-    for i in text:
+    for i in x:
         if i in 'qopadgb4690QROPAD@':
            res += 1
         elif i in '8B%&':
@@ -41,12 +41,11 @@ def is_palindrome(text) :
 
 
 def find_winner(game_state):
-    '''
+    """
     Determination of the winner in the game of tic-tac-toe
     :param game_state:
     :return:'X' or 'O'
-    '''
-
+    """
     res2 = [0, 0, 0]
     res3 = 'D'
     res4, res5 = 0, 0
