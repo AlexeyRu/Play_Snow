@@ -12,7 +12,7 @@ def most_frequent_characters(text):
     for i in d:
         if d[i] == max(d.values()):
             res.append(i)
-    return res
+    return res[0]
 
 
 def sum_text_hole(text):
