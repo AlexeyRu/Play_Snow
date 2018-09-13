@@ -1,9 +1,9 @@
 def most_frequent_characters(text):
-    '''
+    """
     search for the most frequent characters in text
     :param text:
     :return: list of characters
-    '''
+    """
     x = list(text)
     d = dict.fromkeys(set(x), 0)
     res = []
@@ -15,31 +15,28 @@ def most_frequent_characters(text):
     return res
 
 
-def sum_text_hole (text):
-    '''
+def sum_text_hole(text):
+    """
     Calculate number of text holes.
     :param text:
     :return: number of text holes
-    '''
-    x = list(text)
+    """
     res = 0
     for i in x:
-        if i in list('qopadgb460QROPAD@'):
+        if i in 'qopadgb4690QROPAD@':
            res += 1
-        elif i in list('8B%&'):
+        elif i in '8B%&':
             res += 2
     return res
 
 
-def is_palindrome (text) :
-    '''
+def is_palindrome(text) :
+    """
     Check if a text is palindrome or not
     :param text:
     :return: True or False
-    '''
-    if (text == text[::-1]):
-        return True
-    return False
+    """
+    return (text == text[::-1])
 
 
 def find_winner(game_state):
@@ -62,8 +59,8 @@ def find_winner(game_state):
             if r == 1 and c == 1 and j == 'X': res4 += 1; res5 += 1
             if r == 2 and c == 0 and j == 'X': res5 += 1
             if r == 2 and c == 2 and j == 'X': res4 += 1
-            #print(res1, end=" ")
-        #print(res3, res2, res4, res5, end="  ")
+            #print(res1, end="  ")
+        #print(res3, res2, res4, res5, )
         if res1 == 0:
             res3 = 'O'
         elif res1 == 3:
@@ -77,16 +74,15 @@ def find_winner(game_state):
         else:
             if res4 == 0 or res5 == 0: res = 'O'
             if res4 == 3 or res5 == 3: res = 'X'
-            res = 'D'
-    return(res)
+    return res
 
 
-def check_input_TicTacToe_state(input):
-    '''
+def check_input_tictactoe_state(input):
+    """
     Check input validation
-    :param input:
+    :param input: string which cconsist from 3 characters
     :return:validation - True/False, reason: string
-    '''
+    """
     validation = False
     if len(input) < 3 :
         reason = 'input is too short (need 3 symbols). Try one more time!'
@@ -102,11 +98,3 @@ def check_input_TicTacToe_state(input):
         else:
             reason = 'You use no correct symbols (only "X" and "O"). Try one more time!'
     return validation, reason
-
-
-
-    [
-        "OOX",
-        "XXO",
-        "OXX"
-    ]
