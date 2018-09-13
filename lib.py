@@ -99,3 +99,16 @@ def check_input_tictactoe_state(input):
         else:
             reason = 'You use no correct symbols (only "X" and "O"). Try one more time!'
     return validation, reason
+
+
+def most_frequent_word(text):
+    """
+    search for the most frequent words in text
+    :param text: text in one string
+    :return: first most frequent word
+    """
+    text = text.strip().lower().split()
+    t = list(frozenset(text))
+    v = [text.count(i) for i in t]
+    return t[v.index(max(v))]
+
