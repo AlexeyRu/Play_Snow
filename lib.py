@@ -40,11 +40,11 @@ def is_palindrome(text) :
 
 
 def find_winner(game_state):
-    '''
+    """
     Determination of the winner in the game of tic-tac-toe
     :param game_state:
     :return:'X' or 'O'
-    '''
+    """
     res2 = [0, 0, 0]
     res3 = 'D'
     res4, res5 = 0, 0

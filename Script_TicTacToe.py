@@ -2,6 +2,10 @@ import lib
 
 
 def main():
+    """
+    main function
+    :return:
+    """
     '''
     print('Введите исход игры в "крестики нолики" по строкам. В конце каждой строки жмем "Enter:\n')
     x = []
