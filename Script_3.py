@@ -1,12 +1,13 @@
 import lib
 
 def main():
-    text = input('Введите текст \n')
 
-    if lib.is_palindrome(text):
-        print('Этот текст является палиндромом')
-    else:
-        print('Этот текст не палиндром')
+    assert lib.is_palindrome("А роза упала на лапу Азора") == True
+    assert lib.is_palindrome("А роза упала на лапу Азора ") == True
+    assert lib.is_palindrome("А роза не упала на лапу Азора ") == False
+    assert lib.is_palindrome("Sum\ summus \mus") == True
+
+    print(lib.is_palindrome("Sum summus mus"))
 
 
 if __name__ == '__main__':

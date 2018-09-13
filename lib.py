@@ -36,6 +36,7 @@ def is_palindrome(text) :
     :param text:
     :return: True or False
     """
+    text = ''.join(text.strip().lower().split())
     return (text == text[::-1])
 
 
