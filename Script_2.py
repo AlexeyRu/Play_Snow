@@ -1,9 +1,11 @@
 import lib
 
 def main():
-    text = input('Введите текст (только буквы латинского алфавита и цифры)\n')
 
-    print('\nКоличество “отверстий” в тексте :', lib.sum_text_hole(text), 'штук')
+    assert lib.sum_text_hole("1234567890") == 6
+    assert lib.sum_text_hole("qopdbRB") == 8
+    assert lib.sum_text_hole("@%&") == 5
+
 
 if __name__ == '__main__':
     main()

@@ -22,7 +22,7 @@ def sum_text_hole(text):
     :return: number of text holes
     """
     res = 0
-    for i in x:
+    for i in text:
         if i in 'qopadgb4690QROPAD@':
            res += 1
         elif i in '8B%&':
