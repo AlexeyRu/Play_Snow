@@ -22,7 +22,7 @@ def sum_text_hole(text):
     :return: number of text holes
     """
     res = 0
-    for i in x:
+    for i in text:
         if i in 'qopadgb4690QROPAD@':
            res += 1
         elif i in '8B%&':
@@ -30,14 +30,14 @@ def sum_text_hole(text):
     return res
 
 
-def is_palindrome(text) :
+def is_palindrome(text):
     """
     Check if a text is palindrome or not
     :param text:
     :return: True or False
     """
     text = ''.join(text.strip().lower().split())
-    return (text == text[::-1])
+    return text == text[::-1]
 
 
 def find_winner(game_state):
