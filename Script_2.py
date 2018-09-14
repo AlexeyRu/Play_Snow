@@ -1,5 +1,6 @@
 import lib
 
+
 def main():
 
     assert lib.sum_text_hole("1234567890") == 6
@@ -9,3 +10,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    

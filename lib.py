@@ -108,7 +108,7 @@ def most_frequent_word(text):
     :return: first most frequent word
     """
     text = text.strip().lower().split()
-    t = list(frozenset(text))
+    t = []
+    [t.append(i) for i in text if i not in t]
     v = [text.count(i) for i in t]
     return t[v.index(max(v))]
-

@@ -1,5 +1,6 @@
 import lib
 
+
 def main():
 
     assert lib.is_palindrome("А роза упала на лапу Азора") == True
